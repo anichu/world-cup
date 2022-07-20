@@ -15,18 +15,22 @@ main {
 
 .banner-title {
 	font-size: 70px;
-	margin-bottom: 20px;
 	font-weight: 700;
+	margin-bottom: 20px;
 }
+
 .banner-section p {
 	font-size: 16px;
 	letter-spacing: 0.8px;
-	margin-bottom: 30px;
+	margin: 20px 0px;
+}
+.banner-button {
+	margin: 30px 0px;
 }
 .banner-section {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
 	background-color: #161616;
 	color: white;
 	border-radius: 10px;
@@ -42,13 +46,22 @@ main {
 	width: 100%;
 	margin-top: 20px;
 }
+
 .link-button {
 	text-transform: capitalize;
 	background-color: #dd0000;
 	color: white;
-	padding: 0.5em 1em;
-	border: 1px solid #dd0000;
+	padding: 0.7em 1em;
+	border: 2px solid #dd0000;
 	border-radius: 5px;
+	font-weight: 700;
+	transition: color 0.2s, background-color 0.3s;
+}
+
+.banner-button .link-button:hover {
+	border-color: #dd0000;
+	background-color: white;
+	color: #dd0000;
 }
 .fa-chevron-right {
 	margin-left: 10px;
@@ -111,7 +124,7 @@ main {
 .blog-section-button {
 	background-color: white;
 	color: black;
-	width: 200px;
+	width: 150px;
 	text-align: center;
 	border-radius: 10px;
 	text-transform: capitalize;
@@ -156,7 +169,7 @@ footer {
 	margin-left: 30px;
 }
 
-hr {
+.footer-line {
 	margin: 50px 0px;
 	border: 0.01px solid rgba(255, 255, 255, 0.1);
 }
@@ -179,9 +192,175 @@ footer h2 {
 	margin-left: 30px;
 }
 
+.view-all-button {
+	display: none;
+	text-align: center;
+}
+.view-all-button button {
+	font-size: 18px;
+	padding: 0.5em 1em;
+	background-color: #dd0000;
+	border: 1px solid #dd0000;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
+	margin: 50px 0;
+}
+
+/* ---------------------------
+Team matches styles ---------*/
+
+.matches {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 30px;
+	row-gap: 20px;
+}
+.flag,
+.team-name {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.team-name {
+	text-transform: uppercase;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.flag-vs {
+	margin: 0px 10px;
+}
+
+.match {
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.flag img {
+	width: 94px;
+	height: 55px;
+}
+
+.match p {
+	font-weight: 800;
+}
+
+/* -----------------------------------
+Group styles-----------------------------*/
+
+.groups {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	row-gap: 30px;
+}
+
+.group-header {
+	text-align: center;
+	font-size: 40px;
+}
+.group {
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	padding: 10px 50px;
+	border-radius: 10px;
+}
+.group h3 {
+	text-transform: uppercase;
+}
+
+.group-title {
+	text-transform: uppercase;
+}
+
 /* Media query for tab view */
 
-@media only screen and (min-width) {
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+	.banner-title {
+		font-size: 30px;
+	}
+	.display-none {
+		display: none;
+	}
+
+	.banner-section p {
+		font-size: 14px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.link-button {
+		margin-bottom: 20px;
+	}
+	.banner-section {
+		align-items: flex-end;
+	}
+	.half-width img {
+		width: 100%;
+	}
+	.blog-section {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		margin: 20px 0px;
+	}
+	.blog-section .left-side {
+		width: 100%;
+		flex-direction: row;
+		background-color: white;
+		justify-content: space-between;
+		height: 200px;
+		margin: auto;
+	}
+
+	.blog {
+		width: 100%;
+	}
+	.blog-section-button {
+		border: 1px solid #e8e8e8;
+	}
+	.view-all-button {
+		display: block;
+	}
+	main {
+		padding: 20px 40px;
+	}
+
+	.blog-section .right-side {
+		width: 100%;
+	}
+
+	.blogs,
+	.matches,
+	.groups {
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		max-width: 100%;
+	}
+
+	footer {
+		padding: 20px 40px;
+	}
+	.footer-link a {
+		margin: 20px;
+	}
+}
+
+/* Media query for tab view */
+
+@media only screen and (max-width: 720px) {
+	.banner-title {
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+	.blog {
+		width: 250px;
+	}
 }
 
 /* Media query for small mobile devices */
@@ -191,7 +370,12 @@ footer h2 {
 		padding: 10px 20px;
 	}
 	.banner-section p {
-		font-size: 14px;
+		font-size: 12px;
+		margin: 30px 0px;
+		letter-spacing: 0.5;
+	}
+	.banner-title {
+		margin-bottom: 20px;
 	}
 	.banner-section {
 		flex-direction: column;
@@ -204,8 +388,8 @@ footer h2 {
 	.banner-title {
 		font-size: 30px;
 	}
-	.banner-break {
-		display: none;
+	.banner-button {
+		margin-top: 20px;
 	}
 	.blog-section {
 		width: 100%;
@@ -216,7 +400,12 @@ footer h2 {
 	.blog-section .left-side {
 		background-color: #fff;
 	}
-	.blogs {
+	.blog-section-button {
+		border: 1px solid #e8e8e8;
+	}
+	.blogs,
+	.matches,
+	.groups {
 		grid-template-columns: repeat(1, 1fr);
 		row-gap: 20px;
 		column-gap: 0px;
@@ -239,8 +428,11 @@ footer h2 {
 		font-size: 14px;
 		margin: 20px;
 	}
+	.footer-link {
+		flex-direction: column;
+	}
 	footer {
-		padding: 20px 10px;
+		padding: 20px 20px;
 		text-align: center;
 	}
 }
