@@ -300,6 +300,9 @@ Group styles-----------------------------*/
 		height: 200px;
 		margin: auto;
 	}
+	.blog-section-button {
+		border: 1px solid #e8e8e8;
+	}
 }
 
 /* Media query for tab view */
@@ -389,6 +392,10 @@ Group styles-----------------------------*/
 @media only screen and (min-width: 600px) and (max-width: 661px) {
 	.match {
 		padding: 10px;
+	}
+
+	.blog-section-button {
+		font-size: 14px;
 	}
 }
 
