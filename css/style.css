@@ -277,6 +277,25 @@ Group styles-----------------------------*/
 	text-transform: uppercase;
 }
 
+/* Media query for large */
+
+@media only screen and (max-width: 1167px) {
+	.banner-title {
+		font-size: 50px;
+	}
+	.blog-section {
+		flex-direction: column;
+	}
+	.blog-section .left-side {
+		width: 100%;
+		flex-direction: row;
+		background-color: white;
+		justify-content: space-between;
+		height: 200px;
+		margin: auto;
+	}
+}
+
 /* Media query for tab view */
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
@@ -403,9 +422,14 @@ Group styles-----------------------------*/
 		align-items: center;
 		margin: 20px 0px;
 	}
+
 	.blog-section .left-side {
 		width: 100%;
-		background-color: #fff;
+		flex-direction: column;
+		background-color: white;
+		justify-content: space-between;
+		height: 200px;
+		margin: 20px 0px;
 	}
 	.blog-section-button {
 		border: 1px solid #e8e8e8;
@@ -439,6 +463,9 @@ Group styles-----------------------------*/
 	footer {
 		padding: 20px 20px;
 		text-align: center;
+	}
+	.footer-line {
+		margin: 20px 0px;
 	}
 }
 
