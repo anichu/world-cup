@@ -234,7 +234,6 @@ Team matches styles ---------*/
 .match {
 	display: flex;
 	flex-direction: column;
-
 	border-radius: 10px;
 	padding: 20px;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -323,6 +322,7 @@ Group styles-----------------------------*/
 	}
 	.blog-section-button {
 		border: 1px solid #e8e8e8;
+		padding: 0.6em 0.5em;
 	}
 	.view-all-button {
 		display: block;
@@ -363,6 +363,12 @@ Group styles-----------------------------*/
 	}
 }
 
+@media only screen and (min-width: 600px) and (max-width: 661px) {
+	.match {
+		padding: 10px;
+	}
+}
+
 /* Media query for small mobile devices */
 
 @media only screen and (max-width: 600px) {
@@ -398,10 +404,13 @@ Group styles-----------------------------*/
 		margin: 20px 0px;
 	}
 	.blog-section .left-side {
+		width: 100%;
 		background-color: #fff;
 	}
 	.blog-section-button {
 		border: 1px solid #e8e8e8;
+		font-size: 20px;
+		width: 200px;
 	}
 	.blogs,
 	.matches,
@@ -418,10 +427,6 @@ Group styles-----------------------------*/
 	.blog {
 		width: 90%;
 		margin: auto;
-	}
-	.blog-section-button {
-		font-size: 14px;
-		width: 120px;
 	}
 
 	.footer-link a {
